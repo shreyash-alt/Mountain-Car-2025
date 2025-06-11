@@ -87,13 +87,13 @@ plt.legend(loc=4)
 plt.show()
 # --- Final Remark ---
 if goal_reached_at is not None:
-    print(f"\n🎯 Goal was first reached at Episode {goal_reached_at}!")
+    print(f"\n Goal was first reached at Episode {goal_reached_at}!")
 else:
-    print("\n⚠️ Goal was not reached during training.")
+    print("\n Goal was not reached during training.")
 
 # --- Post-Training Demo Run with Rendering ---
 
-print("\n🎬 Running final demo using trained Q-table...")
+print("\n Running final demo using trained Q-table...")
 
 env = gym.make("MountainCar-v0", render_mode="human")
 state, _ = env.reset()
