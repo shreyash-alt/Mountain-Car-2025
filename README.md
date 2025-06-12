@@ -9,7 +9,4 @@ This project is based on a [YouTube tutorial by sentdex] that demonstrates the c
 - `RL1.py`: Python script tracking
 - `README.md`: This file
 
-## 📌 What I Learned / Modified
-- Implemented object tracking with OpenCV
-- Added keyboard shortcuts for controlling the camera feed
-- Experimented with different tracker types (KCF, CSRT)
+
