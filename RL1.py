@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 
 env = gym.make("MountainCar-v0")  # No rendering during training
 
-new_state, _ = env.reset()
-DISCRETE_OS_SIZE = [20] * len(env.observation_space.high)
-discrete_os_win_size = (env.observation_space.high - env.observation_space.low) / DISCRETE_OS_SIZE
+new_state, _ = env.reset()#reset() returns enironment state and environment specific information
+DISCRETE_OS_SIZE = [20] * len(env.observation_space.high) #creates [20,20] two observations for Mountain Car position and velocity
+discrete_os_win_size = (env.observation_space.high - env.observation_space.low) / DISCRETE_OS_SIZE#gives the interval size per observation
 
 epsilon = 0.9
 EPISODES = 30000
