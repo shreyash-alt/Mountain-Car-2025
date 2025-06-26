@@ -19,7 +19,7 @@ LEARNING_RATE = 0.1
 DISCOUNT = 0.95
 SHOW_EVERY = 200
 
-q_table = np.random.uniform(low=-2, high=0, size=(DISCRETE_OS_SIZE + [env.action_space.n]))
+q_table = np.random.uniform(low=-2, high=0, size=(DISCRETE_OS_SIZE + [env.action_space.n]))#creates a whole action and observation map
 goal_reached_at = None
 ep_rewards=[]
 aggr_ep_rewards={'ep':[],'avg':[],'min':[],'max':[]}
@@ -91,7 +91,6 @@ if goal_reached_at is not None:
 else:
     print("\n Goal was not reached during training.")
 
-# --- Post-Training Demo Run with Rendering ---
 
 print("\n Running final demo using trained Q-table...")
 
@@ -102,7 +101,7 @@ done = False
 steps = 0
 
 while not done and steps < MAX_STEPS:
-    action = np.argmax(q_table[discrete_state])
+    action = np.argmax(q_table[discrete_state])#use generated q table
     new_state, reward, terminated, truncated, _ = env.step(action)
     done = terminated or truncated
     discrete_state = get_discrete_state(new_state)
