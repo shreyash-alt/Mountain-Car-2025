@@ -1,7 +1,7 @@
 import gymnasium as gym
 import numpy as np
 import matplotlib.pyplot as plt
-# --- Training Phase ---
+
 
 env = gym.make("MountainCar-v0")  # No rendering during training
 
